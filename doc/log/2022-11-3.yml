@@ -1,0 +1,26 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Cory
+  - Neeshu
+  - Anish
+  - Yubo
+  - Abhi
+  - Abishek
+goal:
+  - Implement the code for the robot arm.
+  - Continue progress on the robot driven chain and frame.
+description:
+  - name:
+      - Anish
+      - Yubo
+    description: |
+      Anish and Yubo dedicated their efforts towards the development of code for the sophisticated robotic arm, experimenting with the utilization of tensorflow and autonomous implementation.
+    title: Code and Tensorflow
+  - name: Cory
+    description: |
+      Cory further developed and refined the robot-driven chain system, testing it for functionality and efficiency. Modifications were made to the system as needed to address any issues or improve performance.
+    title: Robot Driven Chain
+reflection: |
+  It is with regret that we must report that we were unable to work in an efficient manner and successfully achieve our goal. This was due in part to issues with the camera hardware, which did not function properly. Additionally, the model architecture and expected output were not specified in the relevant documentation, rendering us unable to train with our own data. Furthermore, a lack of efficiency among team members also contributed to our inability to meet our goal.

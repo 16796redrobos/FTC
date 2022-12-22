@@ -1,0 +1,37 @@
+time:
+  start: "17:00"
+  end: "22:00"
+members:
+  - Anish
+  - Antonio
+  - Yubo
+  - Neeshu
+  - Cory
+  - Abishek
+  - Vineet
+goal:
+  - Fix joystick and basic robot movement.
+  - Finish building/troubleshooting claw.
+  - Train model to detect image on cones for autonomous
+description:
+  - name:
+      - Yubo
+      - Anish
+    description: |
+      Yubo and Anish adhered to the engineering design pipeline to refine the previously constructed classification model. The beta 1 prototype was initially implemented as a convolutional neural network utilizing ResNet34 as the foundational network to facilitate the classification task. However, the model's accuracy merely met the baseline model's standards, with an accuracy of 65%. The deployment of this model was additionally impeded by the lack of support for Pytorch and ONNX on the FTC SDK. Consequently, additional data was obtained under varying conditions, with their bounding boxes and class labels annotated using the [Labelme](https://github.com/wkentaro/labelme). Furthermore, the model was reconstructed with a deeper CNN that yielded predictions every layer to adjust the anchor boxes of various sizes, enabling the detection of objects of multiple sizes by leveraging the distinctions in receptive field and information hierarchy. Other backbones was also tested, such as GoogLeNet(Inception V3), ResNet54(from body layer mix7d), etc. The model was also trained with Tensorflow to address compatibility issues. Despite the improvement in accuracy (80%), the model was still unable to be deployed due to the lack of documentation regarding camera and image input/output in the FTC SDK, as well as the unawareness of the storage of assets files in the Android application. The existing standard classes for Tensorflow object detection lacks documentation on expected output and input formats, which is a major hindrance to the deployment of the model.
+    title: Autonomous
+  - name:
+      - Antonio
+    description: To document the design and iteration process, he recorded and photographed every stage of the building process. Moreover, he actively contributed to the construction of the new claw and the coding portion of the robot. He also provided assistance with the building of the robot arm and the claw.
+    title: Robot Arm and Logbook
+  - name:
+      - Cory
+      - Neeshu
+      - Vineet
+    description: |
+      Cory focused his efforts on the development of the claw and the robot arm. In collaboration with Neeshu, Vineet, and Antonio, he contributed to the refinement of the robot arm. Additionally, he assisted Neeshu with the claw. Together, they modified the code of the claw to enhance the servo power, enabling a stronger and faster grip for the claw
+    title: Claw and Robot Arm
+struggles: []
+reflection: |
+  While we faced a number of difficulties, we made progress on a range of tasks, including constructing and resolving issues with the claw, planning for programming, and attempting to train a model for autonomous positioning.
+  However, additional efforts will be required to successfully overcome these challenges and accomplish our objectives.

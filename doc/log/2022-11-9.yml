@@ -1,0 +1,53 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Neeshu
+  - Antonio
+  - Rheeyan
+  - Anish
+  - Amah
+  - Abhi
+  - Abishek
+  - Alexa
+  - Yubo
+  - Cayote
+goal:
+  - Work on the linear slide.
+  - Clean up the wiring on the robot and attach the control hub.
+  - Work on OpenCV and connect the driver hub to the robot.
+  - Logbook.
+description:
+  - name:
+      - Rheeyan
+      - Alexa
+      - Neeshu
+    description: Rheeyan looked for information on building a 4-stage viper slide by watching the goBilda video "Driving Linear Slide with Extension and Retraction Cable." Rheeyan then used a hex wrench in cooperation with Alexa and Neeshu to screw the stages. They finished working on half of his task, and intend to resume their work on the cable and string portion of the construction tomorrow.
+    title: Linear Slide
+  - name:
+      - Neeshu
+      - Antonio
+      - Abhishek
+      - Abhi
+    description: |
+      Neeshu spent a lot of time organizing the wiring on the robot and making sure everything was properly connected. He was familiar with the ports and robot configuration, so he took the lead on this task. To prevent any irreparable harm and facilitate the ability to quickly undo any undesirable changes, Neeshu photographed the robots prior to modifying them.
+
+      In collaboration with Neeshu, Antonio, Abishek, and Abhi, Neeshu removed all of the connections on the control hub and the exit hub. They carefully labeled each connection to make it easier to reconnect everything in the proper order. Once all of the connections were removed, the team began the process of reattaching everything to their designated slots. This included the four direct current motors, camera, and two servo motors, as well as the encoders.
+
+      Once all of the components were properly connected, the team modified the settings in the hardware configuration app to ensure that everything was properly configured. They then recompiled the basic drive code and thoroughly tested the setups for accuracy. It was a long and meticulous process, but they were able to complete it successfully and ensure that the robot was fully functional.
+    title: Wiring and Control Hub
+  - name:
+      - Anish
+      - Yubo
+    description: |
+      Anish and Yubo worked on implementing OpenCV, a computer vision library, on the robot. They spent a lot of time researching and learning about the different functions and capabilities of OpenCV, and how it could be used to improve the performance of the robot.
+
+      To get started, they connected the driver hub to the robot. This was an important step, as the driver hub is responsible for transmitting signals from the control system to the various components on the robot. They made sure that the connection was secure and that all of the necessary cables and connectors were properly in place.
+
+      Once the driver hub was connected, Anish and Yubo began working on integrating OpenCV into the control system. The JNI (Java native interface) libary of OpenCV is downloaded and installed through ADB (Android debug bridge). Further, extenive modification to gradle files is conducted to ensure new application with OpenCV can be built. They were able to successfully integrate OpenCV into the control system, and are now able to use it to improve the performance of the robot.
+    title: OpenCV and Driver Hub
+  - name: Antonio
+    description: Antonio spent a lot of time closely observing the team's work and taking detailed notes. He made sure to include all relevant information, such as the tasks that had been completed, any problems that had arisen, and how they had been resolved. He also included information about the team's future plans and any updates on the status of their project.
+    title: Logbook
+struggles: []
+reflection: Made progress on various tasks, including the linear slide, wiring and control hub, OpenCV and driver hub, and logbook. We were able to successfully complete majority of our tasks, and are now able to move on to the next set of goals.

@@ -1,0 +1,20 @@
+time:
+  start: 15:00
+  end: 16:30
+members:
+  - Neeshu
+  - Cory
+goal:
+  - Grabbing motion in the robot arm.
+  - Construct hooks.
+description:
+  - name:
+      - Neeshu
+      - Cory
+    description: |
+      - Assisted in the construction of hooks for lifting and placing cones in the poles
+      - Designed and prototyped the hooks
+      - Tested the hooks to ensure they were fit for purpose
+      - Documented the design process, including any modifications or improvements made. Contributed to the construction of reliable, efficient hooks that can be used effectively in competition
+    title: Robot Arm
+reflection: Made progress on the robot arm and hook construction, with the aim of improving the efficiency of the grabbing motion and cone manipulation.

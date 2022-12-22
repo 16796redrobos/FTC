@@ -1,0 +1,39 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Neeshu
+  - Antonio
+  - Rheeyan
+  - Anish
+  - Yubo
+  - Alexa
+  - Cayote
+  - Abhi
+goal:
+  - Work on the linear slide.
+  - Fix the arm for the robot.
+  - Add a servo to control the angle of the claw as it holds onto the cone.
+  - Continue working on the image programming for the robot using OpenCV.
+description:
+  - name:
+      - Rheeyan
+      - Alexa
+    description: Rheeyan and Alexa worked on building a linear slide for the robot. This involved researching different designs and techniques for constructing a slide that would be smooth, reliable, and efficient. They looked for information on building a 4-stage viper slide by watching the goBilda video "Driving Linear Slide with Extension and Retraction Cable." As Rheeyan already finished majority of the slide, they worked together to finish up the string part.
+    title: Linear Slide
+  - name:
+      - Neeshu
+      - Antonio
+    description: Neeshu and Antonio worked on fixing the arm of the robot, which was an important component that was used to manipulate objects and interact with the environment. The arm was composed of a single aluminum tube with a servo motor attached at the end of the bar to control the rotation. The servo motors was not strong enough to hold the weight of the arm, so they modified the design to reduce the weight of the arm. They also added a second servo motor to control the angle of the arm.
+    title: Robot Arm
+  - name:
+      - Neeshu
+      - Antonio
+    description: Neeshu and Antonio continued their work on the robot by adding a servo to control the angle of the claw as it holds onto the cone. The claw was a V shaped structure that had one servo to control one side of it, allowing it to grip the cones.
+    title: Servo and Claw
+  - name:
+      - Anish
+      - Yubo
+    description: The image classification for the robot using OpenCV was still being worked on by Anish and Yubo. Despite the model having been trained with Yolov5 architecture, a camera issue prevented them from using it. Anish and Yubo spent a lot of time meticulously inspecting the camera and the rest of the system to attempt to pinpoint the issue's root cause. To get the camera to function effectively, they experimented with numerous setups, settings, and methods. Overall, this camera issue hampered their efforts, but they stayed committed to finding a fix and carrying on with OpenCV image processing for the robot. They were sure they could address the problem and continue working on their project.
+    title: OpenCV
+reflection: Made progress on various tasks, including the linear slide, robot arm, servo, and image programming using OpenCV.
