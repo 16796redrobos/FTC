@@ -1,0 +1,26 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Cory
+  - Neeshu
+  # TODO: Determine members.
+goal:
+  - Claw mechanism in the robotic arm.
+  - Assemble the linear slide.
+description:
+  - name: Cory
+    description: |
+      - Worked on the design plans for the claw mechanism.
+      - Reviewed the specifications for the 4-stage viper slide.
+      - Began assembling the 4-stage viper slide, screwing the pieces together and stringing them.
+      - Watched video tutorials on how to properly assemble the slide.
+  - name: Neeshu
+    description:
+      - Continued progress on the robotic arm, focusing on the claw mechanism.
+      - Assisted Sarah with the assembly of the linear slide.
+struggles:
+  - description: Struggled to properly tighten the strings on the linear slide.
+    solution: Turned to the video tutorials for guidance and practiced adjusting the tension.
+reflection: |
+  Made good progress on the claw mechanism and linear slide, and began planning for the implementation of the real arm. The assembly of the linear slide was challenging, but we were able to overcome any difficulties through teamwork and the use of online resources.

@@ -6,11 +6,14 @@ members:
   - Sieera
   - Cory
   - Vineet
+time:
+  start: 16:00
+  end: 19:00
 goal:
-  - Completion of the basic drive train and associated programming.
-  - Rectification of the linear slide.
-  - Completion of the intake and associated programming.
-  - Training of the autonomous portion, as well as troubleshooting of the cameras.
+  - Completion of the basic drive train, intake, and associated programming.
+  - Rectification of the linear slide and camera.
+  - Training of the autonomous model.
+# TODO: Add picture of intake
 description: |
   Under the assistance of our esteemed alumni, Sierra, the camera has been affixed to the robot, and the code from the `ObjectDetectionConcept` module has been repurposed to differentiate the objects on the custom sleeve: the console, the robot, and the dragon.
 
@@ -24,11 +27,15 @@ description: |
 
   The servos have been attached to the intake, situated in a V shape. At the termini of the bar, there exists a high-friction deformable cylinder-shaped structure that has been designed to facilitate the effortless grip of the cone. Anish coded the intake and the servos are controlled by the gamepad.
 struggles:
-  - description: >
+  - description: |
       The string within the linear slide is excessively slack, causing the slide to function unreliably in a reproducible manner.
-    solution: >
+    solution: |
       The linear slide has undergone re-stringing with the implementation of an improved knotting technique. Neeshu altered the regular knot to a clove hitch knot, which is stronger and more dependable.
-  - description: >
+  - description: |
       The linear slide, when fully extended or retracted, must be properly regulated to prevent damage to the slide. In other words, if the `forward` or `backward` button is held down while the slide is at its maximum extension or retraction, the string may snap. It is therefore imperative that the slide be controlled appropriately to avoid such an occurrence.
-    solution: >
+    solution: |
       The encoder value from the motor is utilized to determine the position of the linear slide. If the encoder value falls outside of an acceptable range, the motor is programmatically halted. This allows for precise control of the slide's position and helps to prevent damage to the mechanism.
+reflection: |
+  Through the successful implementation of the aforementioned objectives, we have observed a drastic improvement in efficiency. The completion of the basic drive train and associated programming has enhanced our ability to navigate the robot with precision. The repair of the linear slide has addressed the issue of unreliability, allowing the mechanism to function smoothly. The completion of the intake and associated programming has added a valuable capability to the robot, enabling it to acquire and manipulate objects. The training of the autonomous portion and troubleshooting of the cameras has allowed us to optimize the performance of these systems, resulting in a more cohesive and effective overall performance.
+
+  In summary, the achievement of these goals has significantly contributed to the optimization of the robot's capabilities and efficiency.
