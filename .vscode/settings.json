@@ -1,0 +1,10 @@
+{
+    "[markdown]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80,
+    },
+    "[yaml]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 80,
+    }
+}
