@@ -10,6 +10,18 @@ definitions:
     type: string
     description: Markdown text
 properties:
+  figure:
+    type: object
+    description: A figure to be displayed in the logbook
+    properties:
+      src:
+        type: string
+        description: The path to the image
+      caption:
+        type: string
+        description: The alt text for the image
+    required:
+      - src
   members:
     type: array
     description: The members who attended the meeting
