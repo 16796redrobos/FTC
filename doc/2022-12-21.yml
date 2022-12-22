@@ -1,0 +1,34 @@
+members:
+  - Abishek
+  - Anish
+  - Yubo
+  - Neeshu
+  - Sieera
+  - Cory
+  - Vineet
+goal:
+  - Completion of the basic drive train and associated programming.
+  - Rectification of the linear slide.
+  - Completion of the intake and associated programming.
+  - Training of the autonomous portion, as well as troubleshooting of the cameras.
+description: |
+  Under the assistance of our esteemed alumni, Sierra, the camera has been affixed to the robot, and the code from the `ObjectDetectionConcept` module has been repurposed to differentiate the objects on the custom sleeve: the console, the robot, and the dragon.
+
+  Furthermore, the FTC machine learning toolchain has been uncovered and experimented upon. The data set has been compiled and the model has been trained in 3000 mini-batches (estimated to be approximately 110 epochs). A `.tflite` model has been generated and tested on the robot.
+
+  The Feature Pyramid Network (FPN) has been utilized as the backbone of the model, and subsequently, the traditional Single Shot Detector (SSD) has been utilized to detect the objects. The model has achieved satisfactory results in classification and detection in test sets, indicating that the model possesses the capability to generalize effectively.
+
+  Subsequently, the model has been implemented on the robot. The model has been loaded and the inference has been carried out in the ObjectDetectionConcept class. The results have been displayed on the screen via the Camera Stream feature, with bounding boxes and labels depicted.
+
+  The linear slide has been rectified by the replacement of an additional string to retract the slide.
+
+  The servos have been attached to the intake, situated in a V shape. At the termini of the bar, there exists a high-friction deformable cylinder-shaped structure that has been designed to facilitate the effortless grip of the cone. Anish coded the intake and the servos are controlled by the gamepad.
+struggles:
+  - description: >
+      The string within the linear slide is excessively slack, causing the slide to function unreliably in a reproducible manner.
+    solution: >
+      The linear slide has undergone re-stringing with the implementation of an improved knotting technique. Neeshu altered the regular knot to a clove hitch knot, which is stronger and more dependable.
+  - description: >
+      The linear slide, when fully extended or retracted, must be properly regulated to prevent damage to the slide. In other words, if the `forward` or `backward` button is held down while the slide is at its maximum extension or retraction, the string may snap. It is therefore imperative that the slide be controlled appropriately to avoid such an occurrence.
+    solution: >
+      The encoder value from the motor is utilized to determine the position of the linear slide. If the encoder value falls outside of an acceptable range, the motor is programmatically halted. This allows for precise control of the slide's position and helps to prevent damage to the mechanism.
