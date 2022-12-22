@@ -1,0 +1,29 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Cory
+  - Neeshu
+  - Abishek
+  - Anish
+goal:
+  - Build intake for robot
+  - Fix wiring
+  - Write autonomous mode
+description:
+  - name: Cory
+    description: |
+      Cory focused on creating an intake mechanism for the robot. After analyzing the requirements and constraints of the task, he designed a system that was both effective and reliable. To improve the claw's grip and control, he modified it to use two servo motors rather than one. He also modified the fixing mechanism to enhance the claw's grip and fixation with the arm. Once these modifications were complete, Cory carefully followed his design to construct the intake mechanism, using various tools and techniques. He thoroughly tested the mechanism to ensure it functioned properly and the robot could effectively pick up and carry objects.
+    title: Intake
+  - name:
+      - Abishek
+      - Neeshu
+    description: |
+      Abishek assisted Neeshu with fixing wiring issues on the robot. They carefully examining the wiring on the robot and identifying any problems or issues that needed to be addressed. They worked together to troubleshoot the problems and come up with solutions to fix them.
+    title: Wiring
+  - name: Anish
+    description: |
+      Anish employed standard classes to try to get the camera working properly, but unfortunately, he was unable to resolve the issue with the camera. Despite his efforts, the camera simply didn't work. Anish was unable to fully test and deploy his code for autonomous mode. He was forced to put his work on hold until he could find a solution to the camera issue.
+    title: Autonomous Code
+reflection: |
+  We made progress on various tasks including building the intake, fixing wiring, and writing code for autonomous mode. We will continue to work towards completing these tasks and achieving our goals.

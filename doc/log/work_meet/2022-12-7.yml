@@ -1,0 +1,30 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Abhi
+  - Abishek
+  - Anish
+  - Yubo
+  - Antonio
+  - Alexa
+goal:
+  - Work on coding the camera
+  - Test the linear slide
+description:
+  - name:
+      - Anish
+      - Yubo
+    description: |
+      Anish and Yubo focused on programming the camera, with the goal of enabling its functionality and verifying proper operation. They utilized the FTC-ml toolchain to build the models. Despite their efforts, the camera remained inoperable
+  - name:
+      - Abhi
+      - Abishek
+    description: |
+      Abhi and Abishek conducted tests on the attachment of the linear slide to the robot to confirm its proper functioning and the robot's ability to utilize it effectively. They re-deployed the code from Android Studio and tested the robot on the ground, controlled by the driver. While the robot was able to move the linear slide in both directions, it experienced intermittent stoppages during movement.
+  - name:
+      - Alexa
+      - Antonio
+    description: |
+      Alexa and Antonio observed the testing of the linear slide and provided feedback to improve its performance. They attentively watched as Abhi and Abishek conducted the tests, noting any observed issues or problems. They then shared their observations with the team and proposed solutions for identified issues. In addition to observing the slide testing, they also updated the logbook with details about the testing and provided feedback. They included all relevant information, such as completed tasks, encountered problems, and resolutions.
+reflection: We made limited progress on either task today. However, we were able to identify the issues with the camera and linear slide and develop proposals for addressing them. We will continue to work towards completing these tasks and achieving our objectives.

@@ -4,7 +4,6 @@ time:
 members:
   - Cory
   - Neeshu
-  # TODO: Determine members.
 goal:
   - Claw mechanism in the robotic arm.
   - Assemble the linear slide.

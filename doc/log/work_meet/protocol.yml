@@ -1,0 +1,87 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: Normal Work Meet Logbook Entry
+type: object
+definitions:
+  time:
+    type: string
+    description: The time in 24-hour format
+    pattern: "^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$"
+  markdown:
+    type: string
+    description: Markdown text
+properties:
+  figure:
+    type: object
+    description: A figure to be displayed in the logbook
+    properties:
+      src:
+        type: string
+        description: The path to the image
+      caption:
+        type: string
+        description: The alt text for the image
+    required:
+      - src
+  members:
+    type: array
+    description: The members who attended the meeting
+    items:
+      type: string
+  time:
+    type: object
+    description: The time at which the meeting began and ended
+    properties:
+      start:
+        type: time
+        description: The time at which the meeting began
+      end:
+        type: time
+        description: The time at which the meeting ended
+  goal:
+    type: array
+    description: The goals that were set for the meeting
+    items:
+      type: string
+  description:
+    anyOf:
+      - type: markdown
+        description: The description of the meeting
+      - type: array
+        description: A list of descriptions of each member's work
+        items:
+          type: object
+          properties:
+            name:
+              anyOf:
+                - type: string
+                  description: The name of the person
+                - type: array
+                  description: A list of names of the people
+                  items:
+                    type: string
+            description:
+              type: markdown
+              description: The description of the person's job
+            title:
+              type: string
+              description: A short summary of the person's job
+          required: [name, description]
+  struggles:
+    type: array
+    description: The struggles that were encountered during the meeting
+    items:
+      type: object
+      properties:
+        description:
+          type: markdown
+          description: The description of the struggle
+        solution:
+          type: markdown
+          description: The solution to the struggle
+  reflection:
+    type: string
+    description: The reflection of the meeting
+  required:
+    - members
+    - time
+    - description

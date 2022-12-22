@@ -1,0 +1,18 @@
+time:
+  start: "15:00"
+  end: "16:30"
+members:
+  - Neeshu
+  - Cory
+  - Anish
+  - Yubo
+  - Abishek
+goal:
+  - Fix drive train
+  - Finish construction of linear slide and associated programming
+description: |
+  In order to identify and address the problems with the drivetrain, we systematically evaluate various components and identify the root cause. We began by replacing the controllers, and although this did not solve the issue, it helped us to eliminate one potential cause. We then examined the wiring and discovered discrepancies that we were able to correct. However, our troubleshooting efforts did not end there. We continued to test and gather data, and through this process, we were able to pinpoint the main issue as being related to the code. By applying critical thinking skills and analyzing the available information, we were able to focus our efforts on the appropriate solution and ultimately fix the drivetrain.
+
+  After successfully fixing the drivetrain, we turned our attention to the linear slide. We completed the process of attaching the strings and ensured that it was functioning properly. We then began working on the code to enable the linear slide to operate as intended. When we tested it, we found that it was only moving a small distance in each direction.
+reflection: |
+  Despite the need for additional coding to fully optimize the linear slide, our team has successfully completed the task of troubleshooting and repairing the drivetrain and linear slide. The efficiency of our work has ensured that these components are now functioning properly. Our efforts have been instrumental in ensuring the successful operation of these systems.
