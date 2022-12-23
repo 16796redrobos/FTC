@@ -32,8 +32,7 @@ jobs:
       - name: Compile PDF
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: doc/build/main.tex
-          working_directory: doc/build
+          root_file: main.tex
           args: "-pdflatex -shell-escape -interaction=nonstopmode -outdir=doc/build/build"
       - name: Upload PDF
         uses: actions/upload-artifact@v3
