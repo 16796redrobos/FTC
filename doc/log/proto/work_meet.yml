@@ -41,7 +41,7 @@ properties:
     type: array
     description: The goals that were set for the meeting
     items:
-      type: string
+      type: markdown
   description:
     anyOf:
       - type: markdown
@@ -83,5 +83,6 @@ properties:
     description: The reflection of the meeting
   required:
     - members
+    - goal
     - time
     - description

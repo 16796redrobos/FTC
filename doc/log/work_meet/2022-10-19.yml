@@ -6,15 +6,15 @@ members:
   - Cory
   - Vineet
 time:
-  start: 15:00
-  end: 16:30
+  start: "15:00"
+  end: "16:30"
 goal:
   - Assemble the linear slide and start a logbook.
   - Attach the arm.
 description:
-  - Cory:
+  - name: Cory
+    description: |
       - Construction and programming of the arm/intake mechanism.
       - Assembling the linear slide and initiating a logbook.
       - Ideation and assessment of potential arm attachments.
-reflection:
-  - By the next meeting, we aim to find a effective method for attaching the linear slide to the body of the robot, allowing us to lift and transport objects
+reflection: By the next meeting, we aim to find a effective method for attaching the linear slide to the body of the robot, allowing us to lift and transport objects

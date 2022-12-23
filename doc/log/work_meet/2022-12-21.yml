@@ -7,8 +7,8 @@ members:
   - Cory
   - Vineet
 time:
-  start: 16:00
-  end: 19:00
+  start: "16:00"
+  end: "19:00"
 goal:
   - Completion of the basic drive train, intake, and associated programming.
   - Rectification of the linear slide and camera.

@@ -17,6 +17,7 @@ description:
       - Yubo
     description: |
       Anish and Yubo focused on programming the camera, with the goal of enabling its functionality and verifying proper operation. They utilized the FTC-ml toolchain to build the models. Despite their efforts, the camera remained inoperable
+    title: ML and Camera
   - name:
       - Abhi
       - Abishek

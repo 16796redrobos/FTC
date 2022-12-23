@@ -1,0 +1,157 @@
+\documentclass{article}
+% command declaration
+\usepackage{xspace, xparse, xifthen}
+\def\teamnumber{16796\xspace}
+\def\teamname{Team \teamnumber Robodragons Red\xspace}
+\NewDocumentCommand{\img}{O{}m}{\includegraphics[#1]{../images/#2}}
+% minted
+\usepackage[outputdir=build]{minted}
+\setminted{linenos, frame=lines, autogobble, breakanywhere, tabsize=4, breaklines}
+% microtype
+\usepackage{microtype}
+% graphics
+\usepackage{graphicx}
+% hyperlink
+\usepackage{hyperref}
+% header
+\usepackage{fancyhdr}
+\fancyhf{}
+\fancyhf[hl]{\teamname}
+\setlength{\headheight}{24pt}
+\fancyhf[hr]{\img[height=16pt]{logo.png}}
+\pagestyle{fancy}
+\fancyhf[fl]{Engineering Notebook}
+\fancyhf[fr]{\thepage}
+\let\oldheadrule\headrule%
+\RenewDocumentCommand{\headrule}{}{\color{accent}\oldheadrule}
+% calc length
+\usepackage{calc}
+% colors
+\usepackage{xcolor}
+\definecolor{accent}{HTML}{e94829} % 丹罽红
+\definecolor{secondary}{HTML}{ed6d46} % 朱柿橙
+% box
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}
+\tcbuselibrary{external}
+
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+% better title
+\makeatletter
+\undef\maketitle
+\NewDocumentCommand{\maketitle}{}{\begin{titlepage}
+    \tikz[overlay, remember picture] {
+		\node [shading=axis, left color=accent, right color=accent!50!secondary,  shading angle=90, minimum width=\paperwidth, minimum height=6cm, anchor=north west] at ($(current page.north west) - (0, 1in + \voffset)$) {
+			\def\width{\linewidth + 0.5cm}
+			\begin{minipage}[c]{0.75\width}
+				\begin{flushleft}
+					{\fontsize{44}{60}\selectfont\bfseries\color{white}\@title}
+				\end{flushleft}
+			\end{minipage}\qquad
+			\begin{minipage}[c]{0.25\width}
+				\begin{flushright}
+					\img[height=3.5cm]{powerplay-light}
+				\end{flushright}
+			\end{minipage}
+		}
+	}
+	\vfill
+	\Large
+	{\bfseries\hspace{-1em}\img[height=2.5cm]{logo}\\
+	\@author}\\[0.5em]
+	\@date
+  \end{titlepage}\newpage}
+\makeatother
+% title
+\usepackage[calcwidth]{titlesec}
+\usepackage{adjustbox}
+\titleformat{\section}
+{\normalfont\LARGE\bfseries\color{accent}}
+{\raisebox{-4.25mm}{\tikz[overlay]{
+		\node[
+			shading=axis,
+			left color=accent,
+			right color=secondary,
+			shading angle=135,
+			anchor=south west,
+			outer sep=0,
+			draw=none,
+			inner sep=.5mm,
+			text=white,
+			font=\Large,
+			text width=1.5cm,
+			align=center,
+			minimum height=8.5mm,
+		] (a) {\thesection};
+	}
+}}
+{1.5cm + 0.2em}
+{}
+\titleformat{\subsection}[block]
+{\normalfont\large\bfseries\color{accent}
+\tikz[overlay]{
+	\draw[secondary] (0, -0.2em) -- (\linewidth, -0.2em);
+}}
+{\raisebox{-1mm}{\tikz[overlay]{
+	\node[
+		shading=axis,
+		left color=accent,
+		right color=secondary,
+		shading angle=135,
+		anchor=south west,
+		outer sep=0,
+		draw=none,
+		inner sep=.5mm,
+		text=white,
+		font=\large,
+		text width=1cm,
+		align=center,
+		minimum height=4.5mm,
+	] (a) {\thesubsection};
+}}}
+{1cm + 0.5em}
+{}
+\NewDocumentCommand{\meeting}{m m}{
+	\def\date{#1}
+	\def\time{#2}
+	\section{\date\\[-4.25mm - 0.25\baselineskip]\normalfont\normalsize\selectfont\color{secondary!50!accent}\time}
+}
+% space & fs
+\usepackage{setspace}
+\usepackage{anyfontsize}
+% logbook entry
+\usepackage{enumitem}
+\usepackage{xhfill}
+\NewDocumentCommand{\tightlist}{}{\setlist{leftmargin=1em, itemsep=0.1em}}
+\NewDocumentEnvironment{struggle}{}{
+	\begin{tcolorbox}[colback=white, colframe=accent,fonttitle=\bfseries\color{white}, sharp corners, left=0.5em, right=0.5em, boxrule=1pt, leftrule=0pt, rightrule=0pt, breakable]
+		\tightlist
+}{\end{tcolorbox}}
+\NewDocumentCommand{\work}{m O{NULL} O{2em}}{
+	\def\worker{#1}
+	\def\worktitle{#2}
+	\vspace{#3}
+	\ifthenelse{\equal{\worktitle}{NULL}}{\tikz {
+			\node[draw=secondary, anchor=south west] (name) at (0,0) {\color{accent}\small\bfseries\worker};
+	}}{\tikz{
+			\node[draw=secondary, anchor=south west] (name) at (0,0) {\color{accent}\small\bfseries\worker};
+			\node[anchor=north west] (title) at ($(name.south west) + (0, 0.1em)$) {\scriptsize \color{gray}\worktitle};
+	}}
+	\par
+}
+% length set
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+% meta
+\title{Engineering\\[0.2em] Notebook}
+\author{\teamname}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\include{logbook.tex}
+
+\end{document}
