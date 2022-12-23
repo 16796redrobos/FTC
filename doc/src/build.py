@@ -199,19 +199,6 @@ def main():
             pbar.set_postfix_str(entry.stem)
             f.write(render_work_meet(entry) + "\n\n")
 
-    subprocess.run(
-        [
-            "latexmk",
-            "-pdflatex",
-            "-shell-escape",
-            "-outdir=" + str(build_dir / "build"),
-            "-interaction=nonstopmode",
-            "main.tex",
-        ],
-        cwd=build_dir,
-        check=True,
-    )
-
 
 if __name__ == "__main__":
     main()

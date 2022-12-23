@@ -1,0 +1,7 @@
+appdirs==1.4.4
+panflute==2.2.3
+Pillow==9.3.0
+PyYAML==6.0
+torch==1.4.0+cpu
+tqdm==4.64.1
+transformers==4.25.1

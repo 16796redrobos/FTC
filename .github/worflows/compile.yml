@@ -1,0 +1,37 @@
+name: Build Logbook
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          pip install -r doc/src/requirements.txt
+      - name: Build logbook
+        run: |
+          cd doc/src
+          python build.py
+      - name: Change working directory
+        run: |
+          cd doc/build
+      - name: Compile PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: doc/build/main.tex
+          working-directory: doc/build
+          args: "-pdflatex -shell-escape -interaction=nonstopmode -outdir=doc/build/build"
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: PDF
+          path: doc/build/build/main.pdf
