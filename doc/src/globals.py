@@ -8,6 +8,8 @@ logging.basicConfig(level=logging.INFO)
 logger.addHandler(logging.FileHandler("build.log"))
 
 file_dir = Path(__file__).resolve().parent
+logger.info(f"File directory: {file_dir}")
+
 template_dir = file_dir / "template"
 doc_dir = file_dir.parent
 build_dir = doc_dir / "build"
