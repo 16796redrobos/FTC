@@ -20,7 +20,8 @@ jobs:
           pip install -r doc/src/requirements.txt
       - name: Install pandoc
         run: |
-          sudo apt-get install pandoc
+          wget https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-1-amd64.deb
+          sudo dpkg -i pandoc-2.19.2-1-amd64.deb
       - name: Build logbook
         run: |
           cd doc/src
