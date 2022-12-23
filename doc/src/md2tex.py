@@ -1,4 +1,3 @@
-import asyncio
 import functools
 import subprocess
 from hashlib import md5
@@ -14,40 +13,29 @@ def md2tex(md: str):
     Use pandoc to convert markdown to latex
     """
 
-    return subprocess.run(
-        [
-            "pandoc",
-            "--from=markdown",
-            "--to=latex",
-            "--output=-",
-            "--filter=" + str((file_dir / "md2tex.py").resolve()),
-        ],
-        input=md,
-        check=True,
-        stdout=subprocess.PIPE,
-        text=True,
-        encoding="utf-8",
-    ).stdout
-
-
-async def async_md2tex(md: str):
-    """
-    Use pandoc to convert markdown to latex
-    """
-
-    proc = await asyncio.create_subprocess_exec(
-        "pandoc",
-        "--from=markdown",
-        "--to=latex",
-        "--output=-",
-        "--filter=" + str((file_dir / "md2tex.py").resolve()),
-        stdin=asyncio.subprocess.PIPE,
-        stdout=asyncio.subprocess.PIPE,
-        encoding="utf-8",
-        text=True,
-    )
-    stdout, _ = await proc.communicate(md)
-    return stdout
+    try:
+        proc = subprocess.run(
+            [
+                "pandoc",
+                "--from=markdown",
+                "--to=latex",
+                "--output=-",
+                "--filter=" + str((file_dir / "md2tex.py").resolve()),
+            ],
+            input=md,
+            check=True,
+            stdout=subprocess.PIPE,
+            text=True,
+            encoding="utf-8",
+        )
+    except subprocess.CalledProcessError as e:
+        logger.error(e)
+        logger.error("Pandoc output:")
+        logger.error(e.stdout)
+        logger.error("Pandoc error:")
+        logger.error(e.stderr)
+        raise
+    return proc.stdout
 
 
 @functools.cache
