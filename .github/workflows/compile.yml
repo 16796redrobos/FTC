@@ -27,12 +27,13 @@ jobs:
         run: |
           cd doc/src
           python build.py
-          cd ../../build
+          cd ${GITHUB_WORKSPACE}
+          pwd
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            main.tex
+            doc/build/main.tex
           args: |
             -pdf
             -shell-escape
@@ -42,4 +43,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: logbook
-          path: main.pdf
+          path: doc/build/main.pdf
