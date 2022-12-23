@@ -30,11 +30,12 @@ jobs:
           cd doc/src
           python build.py
           cd ${GITHUB_WORKSPACE}
+          pwd
       - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
           root_file: |
-            doc/build/main.tex
+            main.tex
           args: -pdf -shell-escape -interaction=nonstopmode -file-line-error
           working_directory: doc/build
       - name: Upload PDF
