@@ -33,7 +33,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: doc/build/main.tex
-          working-directory: doc/build
+          working_directory: doc/build
           args: "-pdflatex -shell-escape -interaction=nonstopmode -outdir=doc/build/build"
       - name: Upload PDF
         uses: actions/upload-artifact@v3
