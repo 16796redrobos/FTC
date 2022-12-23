@@ -7,35 +7,39 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
           python-version: "3.10"
           cache: "pip"
-      - name: Install dependencies
-        run: |
-          pip install -r doc/src/requirements.txt
+      - name: Install pip dependencies
+        run: pip install -r doc/src/requirements.txt
       - name: Install pandoc
         run: |
           wget https://github.com/jgm/pandoc/releases/download/2.19.2/pandoc-2.19.2-1-amd64.deb
           sudo dpkg -i pandoc-2.19.2-1-amd64.deb
-      - name: Build logbook
+      - name: Generate LaTeX
         run: |
           cd doc/src
           python build.py
-      - name: Change working directory
-        run: |
-          cd doc/build
-      - name: Compile PDF
+          cd ../../build
+      - name: Compile
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
-          args: "-pdflatex -shell-escape -interaction=nonstopmode -outdir=doc/build/build"
+          root_file: |
+            main.tex
+          args: |
+            -pdf
+            -shell-escape
+            -interaction=nonstopmode
+            -file-line-error
       - name: Upload PDF
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
-          name: PDF
-          path: doc/build/build/main.pdf
+          name: logbook
+          path: main.pdf
